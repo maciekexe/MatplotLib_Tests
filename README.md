@@ -42,15 +42,37 @@ Testy będą sprawdzać realne użycie biblioteki Matplotlib. Skupimy się na:
 2. Tworzeniu wykresu słupkowego (bar chart) z niestandardowymi kolorami i etykietami osi.
 3. Eksportowaniu skomplikowanego wykresu do formatu wektorowego `.svg`.
 4. Weryfikacji poprawnego renderowania wielu wykresów na jednej figurze.
+5. Tworzenie prostego wykresu przestrzennego 3D i weryfikacja poprawnego wygenerowania artefaktu.
 
 ### Testy wydajnościowe 
 Testy będą mierzyć czas wykonania operacji i zapisywać wynik do loga:
 1. Pomiar czasu wygenerowania i zapisu do pliku bardzo dużego zbioru danych w porównaniu do małego zbioru.
+2. Pomiar i porównanie czasu renderowania i eksportu tego samego skomplikowanego wykresu do pliku .png przy standardowej rozdzielczości (np. 100 DPI) oraz bardzo wysokiej rozdzielczości (np. 600 DPI).
 
 ### Testy akceptacyjne
 Zostaną opisane w osobnym dokumencie (`testy_akceptacyjne.md`) i będą zawierać cel testu, oczekiwany rezultat oraz kryterium zaliczenia.
 
 ### CI/CD Pipeline
-Wykorzystamy GitHub Actions. Pipeline będzie uruchamiana manualnie, zainstaluje środowisko oraz Matplotlib z PyPI, a następnie uruchomi nasze testy funkcjonalne i wydajnościowe, wyświetlając podsumowanie. Nie będziemy używać Dockerów ani matrix buildów.
+Wykorzystamy GitHub Actions. Pipeline będzie uruchamiana manualnie, zainstaluje środowisko oraz Matplotlib z PyPI, uruchomi testy jednostkowe biblioteki, a następnie uruchomi nasze testy funkcjonalne i wydajnościowe, wyświetlając podsumowanie.
 
 ## 📂 Struktura katalogów projektu
+.
+├── .github/
+│   └── workflows/
+│       └── pipeline.yml            # Odpowiedzialny: Maciej Kamiński 
+├── docs/
+│   └── testy_akceptacyjne.md       # Odpowiedzialny: Karol Stolc (Dokument z 3 scenariuszami testów akceptacyjnych)
+├── src/
+│   ├── functional_tests/           # Odpowiedzialni: Karol Stolc (3 testy) & Maciej Kamiński (2 testy)
+│   │   ├── test_2d_plot.py         # -> Karol Stolc
+│   │   ├── test_bar_chart.py       # -> Karol Stolc
+│   │   ├── test_svg_export.py      # -> Karol Stolc
+│   │   ├── test_subplots.py        # -> Maciej Kamiński
+│   │   └── test_3d_plot.py         # -> Maciej Kamiński
+│   └── performance_tests/          # Odpowiedzialny: Nataniel Żbikowski (2 testy wydajnościowe)
+│       ├── test_large_dataset.py   # -> Nataniel Żbikowski
+│       └── test_dpi_render.py      # -> Nataniel Żbikowski
+├── build_scripts/                  
+│   └── build_matplotlib.sh         # dodatkowo
+├── requirements.txt                # Odpowiedzialny: Maciej Kamiński
+└── README.md                       # Odpowiedzialność wspólna (Koordynuje Maciej Kamiński)
