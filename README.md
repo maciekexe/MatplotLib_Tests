@@ -16,7 +16,7 @@ Projekt realizowany jest w zespole 3-osobowym.
   * **Rola:** 
 
 ## 💬 Komunikacja
-* **Codzienna komunikacja:** Serwer Discord
+* **Codzienna komunikacja:** Serwer Discord, Messenger
 * **Zarządzanie zadaniami i kodem:** GitHub (Issues, Pull Requesty, Code Review).
 
 ## 📅 Harmonogram projektu
