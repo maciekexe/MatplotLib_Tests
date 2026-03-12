@@ -56,6 +56,9 @@ Zostaną opisane w osobnym dokumencie (`testy_akceptacyjne.md`) i będą zawiera
 Wykorzystamy GitHub Actions. Pipeline będzie uruchamiana manualnie, zainstaluje środowisko oraz Matplotlib z PyPI, uruchomi testy jednostkowe biblioteki, a następnie uruchomi nasze testy funkcjonalne i wydajnościowe, wyświetlając podsumowanie.
 
 ## 📂 Struktura katalogów projektu
+## 📂 Struktura katalogów projektu
+
+```
 .
 ├── .github/
 │   └── workflows/
@@ -76,3 +79,4 @@ Wykorzystamy GitHub Actions. Pipeline będzie uruchamiana manualnie, zainstaluje
 │   └── build_matplotlib.sh         # dodatkowo
 ├── requirements.txt                # Odpowiedzialny: Maciej Kamiński
 └── README.md                       # Odpowiedzialność wspólna (Koordynuje Maciej Kamiński)
+```
