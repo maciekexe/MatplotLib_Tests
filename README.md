@@ -11,10 +11,10 @@ Projekt realizowany jest w zespole 3-osobowym.
 * **Maciej Kamiński – Tech Leader**
   * **Rola:** Zarządzanie repozytorium, koordynacja prac, dbałość o harmonogram.
   * **Zadania techniczne:** Konfiguracja środowiska i struktury projektu, implementacja CI/CD, przeprowadzanie Code Review oraz implementacja 2 testów funkcjonalnych.
-* **Nataniel Żbikowski**
+* **[Nataniel Żbikowski](https://github.com/NatanielZ) **
   * **Rola:** Analiza wydajności biblioteki oraz przygotowanie materiałów podsumowujących projekt.
   * **Zadania techniczne:** Zaprojektowanie i implementacja 2 testów wydajnościowych. Opracowanie krótkiej prezentacji końcowej.
-* **Karol Stolc**
+* **[Karol Stolc](https://github.com/KarolS3)**
   * **Rola:** Dbałość o jakość z perspektywy użytkownika oraz główna dokumentacja testowa.
   * **Zadania techniczne:** Stworzenie dokumentu z 3 scenariuszami testów akceptacyjnych. Zaprojektowanie i napisanie pozostałych 3 testów funkcjonalnych weryfikujących realne użycie Matplotlib.
 
