@@ -11,7 +11,7 @@ Projekt realizowany jest w zespole 3-osobowym.
 * **Maciej Kamiński – Tech Leader**
   * **Rola:** Zarządzanie repozytorium, koordynacja prac, dbałość o harmonogram.
   * **Zadania techniczne:** Konfiguracja środowiska i struktury projektu, implementacja CI/CD, przeprowadzanie Code Review oraz implementacja 2 testów funkcjonalnych.
-* **[Nataniel Żbikowski](https://github.com/NatanielZ) **
+* **[Nataniel Żbikowski](https://github.com/NatanielZ)**
   * **Rola:** Analiza wydajności biblioteki oraz przygotowanie materiałów podsumowujących projekt.
   * **Zadania techniczne:** Zaprojektowanie i implementacja 2 testów wydajnościowych. Opracowanie krótkiej prezentacji końcowej.
 * **[Karol Stolc](https://github.com/KarolS3)**
