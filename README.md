@@ -21,17 +21,24 @@ Projekt realizowany jest w zespole 3-osobowym.
 ## 💬 Komunikacja
 * **Codzienna komunikacja:** Serwer Discord, Messenger
 * **Zarządzanie zadaniami i kodem:** GitHub (Issues, Pull Requesty, Code Review).
+* **Spotkania statusowe:** Odbywają się regularnie co dwa tygodnie w czwartki.
+  * **Cel:** Omówienie postępów z ostatnich 14 dni, rozwiązanie problemów technicznych ("blokerów") oraz planowanie zadań na kolejny sprint.
+  * **Najbliższe terminy:** 16.04, 30.04, 14.05, 28.05.
 
 ## 📅 Harmonogram projektu
 Projekt trwa około 2,5 miesiąca i został podzielony na następujące etapy:
 
-1. **Punkt kontrolny 1 (Aktualny): Organizacja projektu** 
+1. **Punkt kontrolny 1 (ZAKOŃCZONO ✅): Organizacja projektu** 
    * Założenie repozytorium, podział ról, ustalenie harmonogramu i planowanie testów.
-2. **Punkt kontrolny 2: Zarządzanie kodem** 
+   * (Zrealizowane: 10.04.2026)
+2. **Punkt kontrolny 2 (W TRAKCIE): Zarządzanie kodem**
+   * Termin: 01.05.2026
    * Wykorzystanie Issues i Pull Requestów, podział zadań w praktyce, wstępny kod testów.
 3. **Punkt kontrolny 3: Testowanie**
+   * Termin: 15.05.2026
    * Uruchomienie działającej pipeline, weryfikacja działających testów funkcjonalnych i wydajnościowych
-4. **Release: Ocena końcowa** 
+4. **Release: Ocena końcowa**
+   * Termin: 29.05.2026
    * Kompletna dokumentacja, działająca pipeline, omówienie problemów w zespole oraz prezentacja końcowa
 
 ## 🧪 Strategia testowa i wstępne scenariusze
@@ -78,3 +85,11 @@ Wykorzystamy GitHub Actions. Pipeline będzie uruchamiana manualnie, zainstaluje
 ├── requirements.txt                # Odpowiedzialny: Maciej Kamiński
 └── README.md                       # Odpowiedzialność wspólna (Koordynuje Maciej Kamiński)
 ```
+## ✅ Definition of Done (DoD)
+Każde zadanie w projekcie uznajemy za oficjalnie zakończone, dopiero gdy spełnia wszystkie poniższe kryteria (DoD):
+1. Kod został napisany i poprawnie uruchamia się lokalnie (bez błędów).
+2. Zmiany zostały wrzucone na osobną gałąź (branch) z użyciem konwencji nazewniczej (np. `feature/...`).
+3. Historia zmian jest czysta, a commity posiadają odpowiednie przedrostki (np. `feat:`, `docs:`, `fix:`).
+4. Został utworzony Pull Request na GitHubie z dodanymi etykietami (Labels) i osobami do sprawdzenia (Reviewers).
+5. Kod przeszedł Code Review i otrzymał co najmniej jeden status "Approve" od innego członka zespołu.
+6. Kod został zmergowany z gałęzią `main`.
