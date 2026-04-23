@@ -13,17 +13,17 @@ Projekt realizowany jest w zespole 3-osobowym.
   * **Zadania techniczne:** Konfiguracja środowiska i struktury projektu, implementacja CI/CD, przeprowadzanie Code Review oraz implementacja 2 testów funkcjonalnych.
 * **[Nataniel Żbikowski](https://github.com/NatanielZ)**
   * **Rola:** Analiza wydajności biblioteki oraz przygotowanie materiałów podsumowujących projekt.
-  * **Zadania techniczne:** Zaprojektowanie i implementacja 2 testów wydajnościowych. Opracowanie krótkiej prezentacji końcowej.
+  * **Zadania techniczne:** Zaprojektowanie i implementacja 5 testów wydajnościowych. Opracowanie krótkiej prezentacji końcowej.
 * **[Karol Stolc](https://github.com/KarolS3)**
   * **Rola:** Dbałość o jakość z perspektywy użytkownika oraz główna dokumentacja testowa.
-  * **Zadania techniczne:** Stworzenie dokumentu z 3 scenariuszami testów akceptacyjnych. Zaprojektowanie i napisanie pozostałych 3 testów funkcjonalnych weryfikujących realne użycie Matplotlib.
+  * **Zadania techniczne:** Stworzenie dokumentu z 3 scenariuszami testów akceptacyjnych. Zaprojektowanie i napisanie pozostałych 4 testów funkcjonalnych weryfikujących realne użycie Matplotlib.
 
 ## 💬 Komunikacja
 * **Codzienna komunikacja:** Serwer Discord, Messenger
 * **Zarządzanie zadaniami i kodem:** GitHub (Issues, Pull Requesty, Code Review).
 * **Spotkania statusowe:** Odbywają się regularnie co dwa tygodnie w czwartki.
   * **Cel:** Omówienie postępów z ostatnich 14 dni, rozwiązanie problemów technicznych ("blokerów") oraz planowanie zadań na kolejny sprint.
-  * **Najbliższe terminy:** ~~16.04~~, 23.04, 14.05, 28.05.
+  * **Najbliższe terminy:** ~~16.04~~, ~~23.04~~, 14.05, 28.05.
 
 ## 📅 Harmonogram projektu
 Projekt trwa około 2,5 miesiąca i został podzielony na następujące etapy:
@@ -50,11 +50,15 @@ Testy będą sprawdzać realne użycie biblioteki Matplotlib. Skupimy się na:
 3. Eksportowaniu skomplikowanego wykresu do formatu wektorowego `.svg`.
 4. Weryfikacji poprawnego renderowania wielu wykresów na jednej figurze.
 5. Tworzenie prostego wykresu przestrzennego 3D i weryfikacja poprawnego wygenerowania artefaktu.
+6. Generowaniu kompleksowego dashboardu analitycznego z użyciem niestandardowej siatki (`GridSpec`), adnotacji, błędów pomiarowych i wielu typów wykresów na jednej figurze.
 
 ### Testy wydajnościowe 
 Testy będą mierzyć czas wykonania operacji i zapisywać wynik do loga:
 1. Pomiar czasu wygenerowania i zapisu do pliku bardzo dużego zbioru danych w porównaniu do małego zbioru.
 2. Pomiar i porównanie czasu renderowania i eksportu tego samego skomplikowanego wykresu do pliku .png przy standardowej rozdzielczości (np. 100 DPI) oraz bardzo wysokiej rozdzielczości (np. 600 DPI).
+3. Porównanie czasu eksportu wykresu do formatu rastrowego (`.png`) oraz wektorowego (`.svg`).
+4. Badanie narzutu wydajnościowego (overhead) przy tworzeniu siatki wielu wykresów na jednej figurze (np. obiekt subplots 10x10).
+5. Porównanie wydajności renderowania dużej liczby markerów za pomocą zoptymalizowanej funkcji `plot` w stosunku do wolniejszej funkcji `scatter`.
 
 ### Testy akceptacyjne
 Zostaną opisane w osobnym dokumencie (`testy_akceptacyjne.md`) i będą zawierać cel testu, oczekiwany rezultat oraz kryterium zaliczenia.
@@ -64,22 +68,25 @@ Wykorzystamy GitHub Actions. Pipeline będzie uruchamiana manualnie, zainstaluje
 
 ## 📂 Struktura katalogów projektu
 ```
-.
 ├── .github/
 │   └── workflows/
 │       └── pipeline.yml            # Odpowiedzialny: Maciej Kamiński 
 ├── docs/
 │   └── testy_akceptacyjne.md       # Odpowiedzialny: Karol Stolc (Dokument z 3 scenariuszami testów akceptacyjnych)
 ├── src/
-│   ├── functional_tests/           # Odpowiedzialni: Karol Stolc (3 testy) & Maciej Kamiński (2 testy)
+│   ├── functional_tests/           # Odpowiedzialni: Karol Stolc (4 testy) & Maciej Kamiński (2 testy)
 │   │   ├── test_2d_plot.py         # -> Karol Stolc
 │   │   ├── test_bar_chart.py       # -> Karol Stolc
 │   │   ├── test_svg_export.py      # -> Karol Stolc
+│   │   ├── test_complex_dashboard.py    # -> Karol Stolc 
 │   │   ├── test_subplots.py        # -> Maciej Kamiński
 │   │   └── test_3d_plot.py         # -> Maciej Kamiński
-│   └── performance_tests/          # Odpowiedzialny: Nataniel Żbikowski (2 testy wydajnościowe)
-│       ├── test_large_dataset.py   # -> Nataniel Żbikowski
-│       └── test_dpi_render.py      # -> Nataniel Żbikowski
+│   └── performance_tests/          # Odpowiedzialny: Nataniel Żbikowski (5 testów wydajnościowych)
+│       ├── test_large_dataset.py     # -> Nataniel Żbikowski
+│       ├── test_dpi_render.py        # -> Nataniel Żbikowski
+│       ├── test_export_formats.py    # -> Nataniel Żbikowski 
+│       ├── test_subplots_overhead.py    # -> Nataniel Żbikowski 
+│       └── test_scatter_bottleneck.py   # -> Nataniel Żbikowski 
 ├── build_scripts/                  
 │   └── build_matplotlib.sh         # dodatkowo
 ├── requirements.txt                # Odpowiedzialny: Maciej Kamiński
