@@ -7,6 +7,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch: 
 
+
 jobs:
   test-suite:
     runs-on: ubuntu-latest
@@ -29,13 +30,11 @@ jobs:
     - name: Testy Funkcjonalne
       run: |
         echo "Uruchamiam testy funkcjonalne..."
-        # Zapisuje obrazki do folderu "wyniki_funkcjonalne"
         pytest src/functional_tests/ -v --basetemp=wyniki_funkcjonalne
 
     - name: Testy Wydajnościowe
       run: |
         echo "Uruchamiam testy wydajnościowe..."
-        # Zapisuje obrazki do folderu "wyniki_wydajnosciowe"
         pytest src/performance_tests/ -v -s --basetemp=wyniki_wydajnosciowe
 
     - name: Zapisz wygenerowane wykresy jako artefakty
@@ -43,8 +42,8 @@ jobs:
       if: always() 
       with:
         name: wygenerowane-wykresy
-        # Szukamy obrazków .png i .svg tylko w naszych bezpiecznych folderach!
         path: |
-          wyniki_funkcjonalne/**/*.{png,svg}
-          wyniki_wydajnosciowe/**/*.png
+          wyniki_funkcjonalne/
+          wyniki_wydajnosciowe/
+          src/performance_tests/*.png
         retention-days: 5
