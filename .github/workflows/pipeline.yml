@@ -29,19 +29,22 @@ jobs:
     - name: Testy Funkcjonalne
       run: |
         echo "Uruchamiam testy funkcjonalne..."
-        pytest src/functional_tests/ -v
+        # Zapisuje obrazki do folderu "wyniki_funkcjonalne"
+        pytest src/functional_tests/ -v --basetemp=wyniki_funkcjonalne
 
     - name: Testy Wydajnościowe
       run: |
         echo "Uruchamiam testy wydajnościowe..."
-        pytest src/performance_tests/ -v -s
+        # Zapisuje obrazki do folderu "wyniki_wydajnosciowe"
+        pytest src/performance_tests/ -v -s --basetemp=wyniki_wydajnosciowe
 
     - name: Zapisz wygenerowane wykresy jako artefakty
       uses: actions/upload-artifact@v4
-     
       if: always() 
       with:
         name: wygenerowane-wykresy
-       
-        path: /tmp/**/*.png 
+        # Szukamy obrazków .png i .svg tylko w naszych bezpiecznych folderach!
+        path: |
+          wyniki_funkcjonalne/**/*.{png,svg}
+          wyniki_wydajnosciowe/**/*.png
         retention-days: 5
