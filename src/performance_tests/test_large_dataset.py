@@ -14,7 +14,7 @@ def measure_render_time(data_size, label, tmp_path):
     ax.plot(data)
     ax.set_title(f"Test Wydajności: {label} ({data_size} punktów)")
 
-    output_file = tmppath / f"plot{label.lower()}.png"
+    output_file = tmp_path / f"plot_{label.lower()}.png"
     fig.savefig(output_file)
     plt.close(fig)
 
