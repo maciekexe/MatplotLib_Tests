@@ -16,3 +16,8 @@ def test_complex_dashboard(tmp_path):
     ax1.plot([1, 2, 3], [1, 4, 9])
     ax2.bar(["A", "B", "C"], [5, 3, 7])
     ax3.scatter([1, 2, 3], [3, 1, 4])
+    fig.savefig(output_file)
+    plt.close(fig)
+
+    assert output_file.exists()
+    assert os.path.getsize(output_file) > 0
