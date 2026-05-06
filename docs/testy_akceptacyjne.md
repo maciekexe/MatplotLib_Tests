@@ -14,3 +14,16 @@ Dokument zawiera trzy scenariusze akceptacyjne zgodne z aktualnym README.
 
 **Oczekiwany rezultat:**  
 Plik PNG istnieje i zawiera poprawny wykres.
+
+## Scenariusz 2 – Renderowanie wykresu słupkowego
+
+**Cel:** Użytkownik chce wygenerować wykres słupkowy z etykietami.
+
+**Kroki:**
+
+1. Użytkownik uruchamia funkcję generującą wykres.
+2. System tworzy wykres słupkowy.
+3. Wykres zapisywany jest do pliku PNG.
+
+**Oczekiwany rezultat:**  
+Plik PNG istnieje i zawiera poprawny wykres słupkowy.
