@@ -27,3 +27,16 @@ Plik PNG istnieje i zawiera poprawny wykres.
 
 **Oczekiwany rezultat:**  
 Plik PNG istnieje i zawiera poprawny wykres słupkowy.
+
+## Scenariusz 3 – Generowanie złożonego dashboardu analitycznego
+
+**Cel:** Użytkownik chce wygenerować dashboard z wieloma typami wykresów.
+
+**Kroki:**
+
+1. System tworzy figurę z GridSpec.
+2. Renderowane są trzy różne wykresy.
+3. Dashboard zapisywany jest do pliku PNG.
+
+**Oczekiwany rezultat:**  
+Plik PNG istnieje i zawiera wszystkie trzy wykresy.
