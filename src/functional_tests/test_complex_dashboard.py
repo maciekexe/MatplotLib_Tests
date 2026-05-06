@@ -19,5 +19,5 @@ def test_complex_dashboard(tmp_path):
     fig.savefig(output_file)
     plt.close(fig)
 
-    assert output_file.exists()
+    assert output_file.exists() == False
     assert os.path.getsize(output_file) > 0
