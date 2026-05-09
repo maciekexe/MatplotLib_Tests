@@ -18,3 +18,11 @@ def create_subplots(n, filename):
     plt.close()
 
     return time.time() - start
+
+def test_subplot_scaling(tmp_path):
+    small = create_subplots(2, tmp_path / "small.png")
+    large = create_subplots(5, tmp_path / "large.png")
+
+    with open(tmp_path / "subplot.log", "w") as f:
+        f.write(f"2x2: {small}\n")
+        f.write(f"5x5: {large}\n")
