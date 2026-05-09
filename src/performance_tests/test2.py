@@ -16,3 +16,4 @@ def render_plot(dpi, filename):
     plt.savefig(filename)
     plt.close()
 
+ return time.time() - start
