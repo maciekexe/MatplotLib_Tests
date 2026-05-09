@@ -27,3 +27,5 @@ def test_export_format_performance(tmp_path):
     with open(tmp_path / "export.log", "w") as f:
         f.write(f"PNG: {png_time}\n")
         f.write(f"SVG: {svg_time}\n")
+
+    assert png_time != svg_time
