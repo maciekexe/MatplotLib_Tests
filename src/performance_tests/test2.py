@@ -27,3 +27,5 @@ def test_dpi_render_performance(tmp_path):
     with open(tmp_path / "dpi.log", "w") as f:
         f.write(f"100 DPI: {low}\n")
         f.write(f"600 DPI: {high}\n")
+
+    assert high > low
