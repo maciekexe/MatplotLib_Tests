@@ -15,3 +15,5 @@ def export(format, filename):
     plt.plot(x, y)
     plt.savefig(filename, format=format)
     plt.close()
+
+    return time.time() - start
