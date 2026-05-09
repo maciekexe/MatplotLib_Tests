@@ -16,3 +16,5 @@ def create_subplots(n, filename):
 
     plt.savefig(filename)
     plt.close()
+
+    return time.time() - start
