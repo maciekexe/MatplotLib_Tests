@@ -23,7 +23,7 @@ Projekt realizowany jest w zespole 3-osobowym.
 * **Zarządzanie zadaniami i kodem:** GitHub (Issues, Pull Requesty, Code Review).
 * **Spotkania statusowe:** Odbywają się regularnie co dwa tygodnie w czwartki.
   * **Cel:** Omówienie postępów z ostatnich 14 dni, rozwiązanie problemów technicznych ("blokerów") oraz planowanie zadań na kolejny sprint.
-  * **Najbliższe terminy:** ~~16.04~~, ~~23.04~~, 14.05, 28.05.
+  * **Najbliższe terminy:** ~~16.04~~, ~~23.04~~, ~~07.05~~, 28.05.
 
 ## 📅 Harmonogram projektu
 Projekt trwa około 2,5 miesiąca i został podzielony na następujące etapy:
@@ -31,13 +31,13 @@ Projekt trwa około 2,5 miesiąca i został podzielony na następujące etapy:
 1. **Punkt kontrolny 1 (ZAKOŃCZONO ✅): Organizacja projektu** 
    * Założenie repozytorium, podział ról, ustalenie harmonogramu i planowanie testów.
    * (Zrealizowane: 10.04.2026)
-2. **Punkt kontrolny 2 (W TRAKCIE): Zarządzanie kodem**
+2. **Punkt kontrolny 2 (ZAKOŃCZONO ✅): Zarządzanie kodem**
    * Termin: 24.04.2026
    * Wykorzystanie Issues i Pull Requestów, podział zadań w praktyce, wstępny kod testów.
-3. **Punkt kontrolny 3: Testowanie**
+3. **Punkt kontrolny 3 (ZAKOŃCZONO ✅): Testowanie**
    * Termin: 15.05.2026
    * Uruchomienie działającej pipeline, weryfikacja działających testów funkcjonalnych i wydajnościowych
-4. **Release: Ocena końcowa**
+4. **Release (W TRAKCIE): Ocena końcowa**
    * Termin: 29.05.2026
    * Kompletna dokumentacja, działająca pipeline, omówienie problemów w zespole oraz prezentacja końcowa
 
